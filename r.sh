@@ -2,18 +2,22 @@
 
 service ssh stop
 
-
-
+#enable bbr
 wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 
+#drop tcp-rst
 iptables -A INPUT -p tcp --tcp-flags RST RST -j DROP
 
-#Create /etc/sysctl.d/local.conf 
-#then sysctl --system
+#optimizing networking 
+cp local.conf /etc/sysctl.d/local.conf 
+sysctl --system
 
-
-#apt-get install python-pip
+#install ss 
+apt-get install python-pip
 pip install git+https://github.com/shadowsocks/shadowsocks.git@master
 
+#block ssh &etc
 #setup /etc/ssh/sshd_config
 #setup /etc/hosts.deny&allow
+
+#shut ipv6
