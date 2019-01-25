@@ -14,3 +14,6 @@ iptables -A INPUT -p tcp --tcp-flags RST RST -j DROP
 
 #apt-get install python-pip
 pip install git+https://github.com/shadowsocks/shadowsocks.git@master
+
+#setup /etc/ssh/sshd_config
+#setup /etc/hosts.deny&allow
