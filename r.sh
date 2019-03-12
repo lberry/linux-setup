@@ -20,7 +20,7 @@ pip install git+https://github.com/shadowsocks/shadowsocks.git@master
 #setup /etc/ssh/sshd_config
 #setup /etc/hosts.deny&allow
 #/etc/ssh/sshd_config 
-#AllowUsers root@www.xxx.com
+#echo 'AllowUsers root@www.xxx.com' > /etc/ssh/sshd_config 
 
 #shut ipv6
 sudo sh -c 'echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6'
