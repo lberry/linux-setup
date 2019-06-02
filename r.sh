@@ -27,6 +27,6 @@ sudo sh -c 'echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6'
 
 #ban crack ip
 wget https://raw.githubusercontent.com/shadowsocks/shadowsocks/master/utils/autoban.py
-python autoban.py < /var/log/shadowsocks.log
-nohup tail -F /var/log/shadowsocks.log | python autoban.py >log 2>log &
+#python autoban.py < /var/log/shadowsocks.log
+#nohup tail -F /var/log/shadowsocks.log | python autoban.py >log 2>log &
 
